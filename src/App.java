@@ -17,10 +17,15 @@ public class App {
             minefield.noBombsMethod();
             minefield.coverWithDirt();
             minefield.displayMineField();
+            minefield.placeRandomMines();
+            minefield.countMines();
             while(playing) {
                 try{   
                     while(true){
+                        minefield.displayMineField(1);
+                        System.out.println("\r\n^^XRAY^^\r\n");
                         minefield.displayMineField();
+                        System.out.println("\r\n^^DIRT^^\r\n");
                         playerInput = input.nextLine();
                         controller.compute(playerInput, minefield);
                     }
